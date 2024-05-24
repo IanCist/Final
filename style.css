@@ -4,6 +4,13 @@ html, body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     padding-top: 100px;
+    .w3-bar .nav-buttons {
+      margin-top: 40px;
+    }
+    .center-iframe{
+      justify-content: center;
+      display: flex;
+    }
   }
    
   .container {
@@ -194,3 +201,4 @@ html, body {
         top: -85px;
     }
   }
+

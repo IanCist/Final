@@ -32,16 +32,15 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large"><img src="img/Little Bird Toys Logo (1).png" alt="logo" style="height:100px;">
-    </a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Gallery</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Photos</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Reviews</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large"><img src="img/Main Logo (1) PS 3.png" alt="logo" style="height:100px;"></a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-buttons">Gallery</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-buttons">Photos</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-buttons">Reviews</a>
     <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">Products <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <button class="w3-padding-large w3-button nav-buttons" title="More">Products <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4" class="navbarlinks">
         <a href="woodenairplane.html" class="w3-bar-item w3-button">Wooden Airplane</a>
-        <a href="#" class="w3-bar-item w3-button">Wodden Train Set</a>
+        <a href="woodentrain.html" class="w3-bar-item w3-button">Wodden Train Set</a>
         <a href="#" class="w3-bar-item w3-button">Wodden Boat</a>
         <a href="#" class="w3-bar-item w3-button">Wodden Block Set</a>
         <a href="#" class="w3-bar-item w3-button">Wodden Car</a>
@@ -111,47 +110,13 @@ body {font-family: "Lato", sans-serif}
     </div>
   </div>
 
-  <!-- The Tour Section -->
-  <div class="w3-black" id="tour">
+  <!-- Gallery -->
+  <div class="w3-black" id="Gallery">
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center">TOUR DATES</h2>
-      <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br>
 
-      <ul class="w3-ul w3-border w3-white w3-text-grey">
-        <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-        <li class="w3-padding">October <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-        <li class="w3-padding">November <span class="w3-badge w3-right w3-margin-right">3</span></li>
-      </ul>
 
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-          <img src="/w3images/newyork.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>New York</b></p>
-            <p class="w3-opacity">Fri 27 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="/w3images/paris.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Paris</b></p>
-            <p class="w3-opacity">Sat 28 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="/w3images/sanfran.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>San Francisco</b></p>
-            <p class="w3-opacity">Sun 29 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-      </div>
+      
+     
     </div>
   </div>
 
@@ -179,7 +144,11 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
     <h2 class="w3-wide w3-center">CONTACT</h2>
     <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
-    <div class="w3-row w3-padding-32">
+   
+    <div class="w3-row w3-padding-32"> 
+      <div class="center-iframe">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.499079112664!2d-74.200697123838!3d39.95259308375739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c19de104aca169%3A0x3a79f18c2f7c1fec!2s43%20Main%20St%2C%20Toms%20River%2C%20NJ%2008753!5e0!3m2!1sen!2sus!4v1716570727711!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
       <div class="w3-col m6 w3-large w3-margin-bottom">
         <i class="fa fa-map-marker" style="width:30px"></i> 43 Main St, Toms River, NJ 08753<br>
         <i class="fa fa-phone" style="width:30px"></i> Phone: (732) 555-1234<br>
