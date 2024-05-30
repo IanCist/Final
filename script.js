@@ -10,30 +10,30 @@ function myFunction() {
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
     console.log("hi")
-  } else { 
+  } else {
     x.className = x.className.replace(" w3-show", "");
-    console.log ("by")
+    console.log("by")
   }
 }
 
 // When the user clicks anywhere outside of the modal, close it
 var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
 
-$(document).ready(function() {
- 
-  $('.color-choose input').on('click', function() {
-      var headphonesColor = $(this).attr('data-image');
- 
-      $('.active').removeClass('active');
-      $('.left-column img[data-image = ' + headphonesColor + ']').addClass('active');
-      $(this).addClass('active');
+$(document).ready(function () {
+
+  $('.color-choose input').on('click', function () {
+    var headphonesColor = $(this).attr('data-image');
+
+    $('.active').removeClass('active');
+    $('.left-column img[data-image = ' + headphonesColor + ']').addClass('active');
+    $(this).addClass('active');
   });
- 
+
 });
 let map;
 
@@ -47,3 +47,13 @@ async function initMap() {
 }
 
 initMap();
+
+document.querySelectorAll('.color-choose input').forEach((element) => {
+  element.addEventListener('click', function () {
+    let imageName = this.getAttribute('data-image');
+    document.querySelectorAll('.img-holder img').forEach((img) => {
+img.classList.remove('active');
+    });
+    document.querySelector(`img[data-image='${imageName}']`).classList.add('active');
+  });
+});

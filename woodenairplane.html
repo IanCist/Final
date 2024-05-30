@@ -61,8 +61,11 @@ body {font-family: "Lato", sans-serif}
     <main class="container">
  
     <!-- Left Column / Headphones Image -->
+    <div class="img-holder">
+    </div>
     <div class="left-column">
-      <img data-image="black" src="img/plane2.jpg" alt="plane2" style="height:500px; padding-top: 150px;">
+      <img src="img/plane2.jpg" alt="plane2" style="height:500px; padding-top: 150px;">
+      <img data-image="black" class="active" src="img/plane1.jpg" alt="" style="height:500px; padding-top: 150px;">
       <img data-image="blue" src="images/blue.png" alt="">
       <img data-image="red" class="active" src="images/red.png" alt="">
     </div>
@@ -113,4 +116,8 @@ body {font-family: "Lato", sans-serif}
     </div>
   </main>
   <script src="script.js"></script>
+  <script>stateList.onchange = function () {
+    let selected = this.value
+    document.getElementById('info-pic').src = `img/${selected}.jpg`
+  }</script>
 </body>
