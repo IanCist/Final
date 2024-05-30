@@ -79,7 +79,9 @@ html, body {
     border: 2px solid #FFFFFF;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
   }
-   
+  .color-choose input[type="radio"]#clear + label span {
+    
+  }
   .color-choose input[type="radio"]#red + label span {
     background-color: #C91524;
   }
@@ -223,3 +225,5 @@ html, body {
     text-align: center;
   }
   
+  .img-holder img { display: none;}
+  .img-holder img.active { display: block;}

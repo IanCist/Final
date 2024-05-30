@@ -48,12 +48,3 @@ async function initMap() {
 
 initMap();
 
-document.querySelectorAll('.color-choose input').forEach((element) => {
-  element.addEventListener('click', function () {
-    let imageName = this.getAttribute('data-image');
-    document.querySelectorAll('.img-holder img').forEach((img) => {
-img.classList.remove('active');
-    });
-    document.querySelector(`img[data-image='${imageName}']`).classList.add('active');
-  });
-});
