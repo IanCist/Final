@@ -208,7 +208,9 @@ html, body {
     margin: 5px;
     border: 1px solid #ccc;
     float: left;
-    width: 180px;
+    width: 23%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
   
   div.gallery:hover {
@@ -217,7 +219,8 @@ html, body {
   
   div.gallery img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
   }
   
   div.desc {

@@ -48,7 +48,6 @@ body {font-family: "Lato", sans-serif}
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
 </div>
-  
   <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
   <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
     <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
@@ -60,10 +59,11 @@ body {font-family: "Lato", sans-serif}
     <main class="container">
  
     <!-- Left Column / Headphones Image -->
-    <div class="left-column">
-      <img data-image="black" src="train/train1.jpg" alt="plane2" style="height:500px; padding-top: 150px;">
-      <img data-image="blue" src="images/blue.png" alt="">
-      <img data-image="red" class="active" src="images/red.png" alt="">
+    <div class="left-column img-holder">
+      <img data-image="clear" src="plane/plane1.jpg" alt="plane1" style="height:500px; padding-top: 150px;">
+      <img data-image="black" class="active" src="plane/plane1black.jpg" alt="plane1" style="height:500px; padding-top: 150px;">
+      <img data-image="blue" src="plane/plane1blue.jpg" alt="plane2" style="height:500px; padding-top: 150px;">
+      <img data-image="red"  src="plane/plane1red.jpg" alt="plane3" style="height:500px; padding-top: 150px;">
     </div>
    
    
@@ -72,8 +72,8 @@ body {font-family: "Lato", sans-serif}
    
       <!-- Product Description -->
       <div class="product-description">
-        <span>Train</span>
-        <h1>Wooden Train</h1>
+        <span>Boat</span>
+        <h1>Wooden Boat</h1>
         <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance</p>
       </div>
    
@@ -85,6 +85,10 @@ body {font-family: "Lato", sans-serif}
           <span>Color</span>
    
           <div class="color-choose">
+            <div>
+              <input data-image="clear" id="clear" type="radio"  name="color" value="clear" checked>
+              <label for="clear"><span></span></label>
+            </div>
             <div>
               <input data-image="red" type="radio" id="red" name="color" value="red" checked>
               <label for="red"><span></span></label>
@@ -106,10 +110,21 @@ body {font-family: "Lato", sans-serif}
          
       <!-- Product Pricing -->
       <div class="product-price">
-        <span>59.99$</span>
+        <span>75.99$</span>
         <a href="#" class="cart-btn">Learn More</a>
       </div>
     </div>
   </main>
   <script src="script.js"></script>
+  <script>
+  document.querySelectorAll('.color-choose input').forEach((element) => {
+  element.addEventListener('click', function () {
+    let imageName = this.getAttribute('data-image');
+    document.querySelectorAll('.img-holder img').forEach((img) => {
+img.classList.remove('active');
+    });
+    document.querySelector(`.img-holder img[data-image='${imageName}']`).classList.add('active');
+  });
+});
+  </script>
 </body>
