@@ -24,6 +24,8 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+.hidden {display: none;}
+.show {display: block;}
 </style>
 </head>
 <body>
@@ -60,10 +62,11 @@ body {font-family: "Lato", sans-serif}
     <main class="container">
  
     <!-- Left Column / Headphones Image -->
-    <div class="left-column">
-      <img data-image="black" src="train/train1.jpg" alt="plane2" style="height:500px; padding-top: 150px;">
-      <img data-image="blue" src="images/blue.png" alt="">
-      <img data-image="red" class="active" src="images/red.png" alt="">
+    <div class="left-column img-holder">
+      <img data-image="clear" src="train/train1.jpg" alt="plane1" style="height:500px; padding-top: 150px;">
+      <img data-image="black" class="active" src="train/train1black.jpg" alt="plane1" style="height:500px; padding-top: 150px;">
+      <img data-image="blue" src="train/train1blue.jpg" alt="plane2" style="height:500px; padding-top: 150px;">
+      <img data-image="red"  src="train/train1red.jpg" alt="plane3" style="height:500px; padding-top: 150px;">
     </div>
    
    
@@ -74,42 +77,72 @@ body {font-family: "Lato", sans-serif}
       <div class="product-description">
         <span>Train</span>
         <h1>Wooden Train</h1>
-        <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance</p>
       </div>
+
+    <!-- Product Configuration -->
+    <div class="product-configuration">
    
-      <!-- Product Configuration -->
-      <div class="product-configuration">
-   
-        <!-- Product Color -->
-        <div class="product-color">
-          <span>Color</span>
-   
-          <div class="color-choose">
-            <div>
-              <input data-image="red" type="radio" id="red" name="color" value="red" checked>
-              <label for="red"><span></span></label>
-            </div>
-            <div>
-              <input data-image="blue" type="radio" id="blue" name="color" value="blue">
-              <label for="blue"><span></span></label>
-            </div>
-            <div>
-              <input data-image="black" type="radio" id="black" name="color" value="black">
-              <label for="black"><span></span></label>
-            </div>
+      <!-- Product Color -->
+      <div class="product-color">
+        <span>Color</span>
+ 
+        <div class="color-choose">
+          <div>
+            <input data-image="clear" id="clear" type="radio"  name="color" value="clear" checked>
+            <label for="clear"><span></span></label>
           </div>
-   
+          <div>
+            <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+            <label for="red"><span></span></label>
+          </div>
+          <div>
+            <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+            <label for="blue"><span></span></label>
+          </div>
+          <div>
+            <input data-image="black" type="radio" id="black" name="color" value="black">
+            <label for="black"><span></span></label>
+          </div>
         </div>
-   
+ 
+      </div>
+
         <!-- Cable Configuration -->
         <div class="cable-config">
          
       <!-- Product Pricing -->
       <div class="product-price">
         <span>59.99$</span>
-        <a href="#" class="cart-btn">Learn More</a>
+        <a href="#" class="cart-btn" onclick="ToggleLearnMore()">Learn More</a>
       </div>
+    </div>
+
+    <div id="learn-more-content" class="hidden">
+      <p>Embark on a charming journey with this beautiful handcrafted wooden train set. Engine and three interchangeable cars boast intricate details made from real beech wood. Large size (84cm L x 11cm H x 13cm W) with moving wheels and a fully ecological design.
+      </p>
     </div>
   </main>
   <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('.color-choose input').forEach((element) => {
+    element.addEventListener('click', function () {
+      let imageName = this.getAttribute('data-image');
+      document.querySelectorAll('.img-holder img').forEach((img) => {
+  img.classList.remove('active');
+      });
+      document.querySelector(`.img-holder img[data-image='${imageName}']`).classList.add('active');
+    });
+  });
+  
+  function ToggleLearnMore(){
+    const learnMoreContent = document.getElementById('learn-more-content');
+    if (learnMoreContent.classList.contains('hidden')) {
+      learnMoreContent.classList.remove('hidden');
+      learnMoreContent.classList.add('show');
+    } else {
+      learnMoreContent.classList.remove('show');
+      learnMoreContent.classList.add('hidden');
+    }
+  }
+    </script>
 </body>

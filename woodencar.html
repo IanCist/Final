@@ -24,6 +24,8 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+.hidden {display: none;}
+.show {display: block;}
 </style>
 </head>
 <body>
@@ -61,10 +63,10 @@ body {font-family: "Lato", sans-serif}
  
     <!-- Left Column / Headphones Image -->
     <div class="left-column img-holder">
-      <img data-image="clear" src="plane/plane1.jpg" alt="plane1" style="height:500px; padding-top: 150px;">
-      <img data-image="black" class="active" src="plane/plane1black.jpg" alt="plane1" style="height:500px; padding-top: 150px;">
-      <img data-image="blue" src="plane/plane1blue.jpg" alt="plane2" style="height:500px; padding-top: 150px;">
-      <img data-image="red"  src="plane/plane1red.jpg" alt="plane3" style="height:500px; padding-top: 150px;">
+      <img data-image="clear" src="car/car1.jpg" alt="plane1" style="height:500px; padding-top: 150px;">
+      <img data-image="black" class="active" src="car/blackcar.jpeg" alt="plane1" style="height:500px; padding-top: 150px;">
+      <img data-image="blue" src="car/bluecar.jpeg" alt="plane2" style="height:500px; padding-top: 150px;">
+      <img data-image="red"  src="car/redcar.jpeg" alt="plane3" style="height:500px; padding-top: 150px;">
     </div>
    
    
@@ -112,20 +114,35 @@ body {font-family: "Lato", sans-serif}
       <!-- Product Pricing -->
       <div class="product-price">
         <span>75.99$</span>
-        <a href="#" class="cart-btn">Learn More</a>
+        <a href="#" class="cart-btn" onclick="ToggleLearnMore()">Learn More</a>
       </div>
+    </div>
+
+    <div id="learn-more-content" class="hidden">
+      <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance</p>
     </div>
   </main>
   <script src="script.js"></script>
   <script>
-  document.querySelectorAll('.color-choose input').forEach((element) => {
-  element.addEventListener('click', function () {
-    let imageName = this.getAttribute('data-image');
-    document.querySelectorAll('.img-holder img').forEach((img) => {
-img.classList.remove('active');
+    document.querySelectorAll('.color-choose input').forEach((element) => {
+    element.addEventListener('click', function () {
+      let imageName = this.getAttribute('data-image');
+      document.querySelectorAll('.img-holder img').forEach((img) => {
+  img.classList.remove('active');
+      });
+      document.querySelector(`.img-holder img[data-image='${imageName}']`).classList.add('active');
     });
-    document.querySelector(`.img-holder img[data-image='${imageName}']`).classList.add('active');
   });
-});
-  </script>
+  
+  function ToggleLearnMore(){
+    const learnMoreContent = document.getElementById('learn-more-content');
+    if (learnMoreContent.classList.contains('hidden')) {
+      learnMoreContent.classList.remove('hidden');
+      learnMoreContent.classList.add('show');
+    } else {
+      learnMoreContent.classList.remove('show');
+      learnMoreContent.classList.add('hidden');
+    }
+  }
+    </script>
 </body>

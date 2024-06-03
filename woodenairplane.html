@@ -24,6 +24,8 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+.hidden {display: none;}
+.show {display: block;}
 </style>
 </head>
 <body>
@@ -74,7 +76,6 @@ body {font-family: "Lato", sans-serif}
       <div class="product-description">
         <span>Airplane</span>
         <h1>Wooden Airplane</h1>
-        <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance</p>
       </div>
    
       <!-- Product Configuration -->
@@ -111,8 +112,13 @@ body {font-family: "Lato", sans-serif}
       <!-- Product Pricing -->
       <div class="product-price">
         <span>75.99$</span>
-        <a href="#" class="cart-btn">Learn More</a>
+        <a href="#" class="cart-btn" onclick="ToggleLearnMore()">Learn More</a>
       </div>
+    </div>
+
+    <div id="learn-more-content" class="hidden">
+      <p>Soar through imaginative skies with this classic wooden airplane. Handcrafted from sustainable Baltic birch wood with a safe, natural harvest finish and a spinning propeller. Measures 3.5"H x 7"L x 7"W.
+      </p>
     </div>
   </main>
   <script src="script.js"></script>
@@ -126,5 +132,16 @@ img.classList.remove('active');
     document.querySelector(`.img-holder img[data-image='${imageName}']`).classList.add('active');
   });
 });
+
+function ToggleLearnMore(){
+  const learnMoreContent = document.getElementById('learn-more-content');
+  if (learnMoreContent.classList.contains('hidden')) {
+    learnMoreContent.classList.remove('hidden');
+    learnMoreContent.classList.add('show');
+  } else {
+    learnMoreContent.classList.remove('show');
+    learnMoreContent.classList.add('hidden');
+  }
+}
   </script>
 </body>
