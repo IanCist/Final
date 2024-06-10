@@ -26,6 +26,43 @@ body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 .hidden {display: none;}
 .show {display: block;}
+
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left-column,
+    .right-column {
+      flex: 1;
+      max-width: 500px;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .img-holder img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (min-width: 768px) {
+
+      .left-column,
+      .right-column {
+        flex: 1;
+      }
+
+      .left-column {
+        order: 1;
+      }
+
+      .right-column {
+        order: 2;
+        text-align: left;
+      }
+    }
 </style>
 </head>
 <body>
@@ -77,7 +114,6 @@ body {font-family: "Lato", sans-serif}
       <div class="product-description">
         <span>Blocks</span>
         <h1>Wooden Blocks</h1>
-        <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance</p>
       </div>
    
       <!-- Product Configuration -->
@@ -119,7 +155,7 @@ body {font-family: "Lato", sans-serif}
     </div>
 
     <div id="learn-more-content" class="hidden">
-      <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance</p>
+      <p>Build creativity and imagination with this high-quality, 72-piece block set. Made from naturally finished and smooth-sanded hardwood blocks, this set comes in a convenient wooden storage crate (13” L x 12” W x 2” H).</p>
     </div>
   </main>
   <script src="script.js"></script>

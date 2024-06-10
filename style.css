@@ -249,6 +249,17 @@ div.desc {
   display: none;
 }
 
+.img-holder {
+  text-align: center; 
+}
+
+.img-holder img {
+  max-width: 100%;
+  height: auto; 
+  margin: 0 auto; 
+}
+
 .img-holder img.active {
   display: block;
 }
+

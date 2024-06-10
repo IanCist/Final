@@ -26,6 +26,43 @@ body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 .hidden {display: none;}
 .show {display: block;}
+
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left-column,
+    .right-column {
+      flex: 1;
+      max-width: 500px;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .img-holder img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (min-width: 768px) {
+
+      .left-column,
+      .right-column {
+        flex: 1;
+      }
+
+      .left-column {
+        order: 1;
+      }
+
+      .right-column {
+        order: 2;
+        text-align: left;
+      }
+    }
 </style>
 </head>
 <body>
