@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title> Little Bird Toy Factory </title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-        crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://use.typekit.net/nca3amv.css">
-<link href="style.css" rel="stylesheet" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-.hidden {display: none;}
-.show {display: block;}
 
-.container {
+<head>
+  <title> Little Bird Toy Factory </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.typekit.net/nca3amv.css">
+  <link href="style.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
     }
@@ -37,8 +45,6 @@ body {font-family: "Lato", sans-serif}
     .left-column,
     .right-column {
       flex: 1;
-      max-width: 500px;
-      margin: 20px;
       text-align: center;
     }
 
@@ -47,85 +53,127 @@ body {font-family: "Lato", sans-serif}
       height: auto;
     }
 
+    .product-description {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .product-description h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .product-color {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .color-choose {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .color-choose div{
+      margin-right: 10px;
+    }
+    .product-price{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .cart-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color:white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .cart-btn:hover {
+      background-color: #0056b3;
+    }
+    #learn-more-content {
+      text-align: center;
+    }
     @media (min-width: 768px) {
-
-      .left-column,
-      .right-column {
-        flex: 1;
+      .container{
+        flex-direction: row;
       }
-
       .left-column {
-        order: 1;
+        margin-right: 20px;
       }
-
-      .right-column {
-        order: 2;
-        text-align: left;
+      .color-choose div{
+        margin-right: 20px;
       }
     }
-</style>
+  </style>
 </head>
-<body>
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large"><img src="img/Main Logo (1) PS 3.png" alt="logo" style="height:100px;"></a>
-    <a href="gallery.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-buttons">Gallery</a>
-    <a href="review.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-buttons">Reviews</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button nav-buttons" title="More">Products <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4" class="navbarlinks">
-        <a href="woodenairplane.html" class="w3-bar-item w3-button">Wooden Airplane</a>
-        <a href="woodentrain.html" class="w3-bar-item w3-button">Wodden Train Set</a>
-        <a href="woodenboat.html" class="w3-bar-item w3-button">Wodden Boat</a>
-        <a href="woodenblock.html" class="w3-bar-item w3-button">Wodden Block Set</a>
-        <a href="woodencar.html" class="w3-bar-item w3-button">Wodden Car</a>
-      </div>
-    </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-  </div>
-</div>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="gallery.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Gallery</a>
-  <a href="review.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Reviews</a>
-  <a href="woodenairplane.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Wooden Airplane</a>
-  <a href="woodenblock.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Wooden Blocks</a>
-  <a href="woodencar.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Wooden Car</a>
-  <a href="woodentrain.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Wooden Train</a>
-</div>
-    <main class="container">
- 
+<body>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large"><img src="img/Main Logo (1) PS 3.png"
+          alt="logo" style="height:100px;"></a>
+      <a href="gallery.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-buttons">Gallery</a>
+      <a href="review.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-buttons">Reviews</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button nav-buttons" title="More">Products <i
+            class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4" class="navbarlinks">
+          <a href="woodenairplane.html" class="w3-bar-item w3-button">Wooden Airplane</a>
+          <a href="woodentrain.html" class="w3-bar-item w3-button">Wodden Train Set</a>
+          <a href="woodenboat.html" class="w3-bar-item w3-button">Wodden Boat</a>
+          <a href="woodenblock.html" class="w3-bar-item w3-button">Wodden Block Set</a>
+          <a href="woodencar.html" class="w3-bar-item w3-button">Wodden Car</a>
+        </div>
+      </div>
+      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
+          class="fa fa-search"></i></a>
+    </div>
+  </div>
+
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="gallery.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Gallery</a>
+    <a href="review.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Reviews</a>
+    <a href="woodenairplane.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Wooden
+      Airplane</a>
+    <a href="woodenblock.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Wooden Blocks</a>
+    <a href="woodencar.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Wooden Car</a>
+    <a href="woodentrain.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Wooden Train</a>
+  </div>
+  <main class="container">
+
     <!-- Left Column / Headphones Image -->
     <div class="left-column img-holder">
-      <img data-image="clear" class="active" src="blocks/block2.jpg" alt="plane1" style="height:500px; padding-top: 150px;">
-      <img data-image="black"  src="blocks/blackblocks.jpeg" alt="plane1" style="height:500px; padding-top: 150px;">
+      <img data-image="clear" class="active" src="blocks/block2.jpg" alt="plane1"
+        style="height:500px; padding-top: 150px;">
+      <img data-image="black" src="blocks/blackblocks.jpeg" alt="plane1" style="height:500px; padding-top: 150px;">
       <img data-image="blue" src="blocks/blueblocks.jpeg" alt="plane2" style="height:500px; padding-top: 150px;">
-      <img data-image="red"  src="blocks/redblocks.jpeg" alt="plane3" style="height:500px; padding-top: 150px;">
+      <img data-image="red" src="blocks/redblocks.jpeg" alt="plane3" style="height:500px; padding-top: 150px;">
     </div>
-   
-   
+
+
     <!-- Right Column -->
     <div class="right-column">
-   
+
       <!-- Product Description -->
       <div class="product-description">
         <span>Blocks</span>
         <h1>Wooden Blocks</h1>
       </div>
-   
+
       <!-- Product Configuration -->
       <div class="product-configuration">
-   
+
         <!-- Product Color -->
         <div class="product-color">
           <span>Color</span>
-   
+
           <div class="color-choose">
             <div>
-              <input data-image="clear" id="clear" type="radio"  name="color" value="clear" checked>
+              <input data-image="clear" id="clear" type="radio" name="color" value="clear" checked>
               <label for="clear"><span></span></label>
             </div>
             <div>
@@ -141,44 +189,46 @@ body {font-family: "Lato", sans-serif}
               <label for="black"><span></span></label>
             </div>
           </div>
-   
+
         </div>
-   
+
         <!-- Cable Configuration -->
         <div class="cable-config">
-         
-      <!-- Product Pricing -->
-      <div class="product-price">
-        <span>69.99$</span>
-        <a href="#" class="cart-btn" onclick="ToggleLearnMore()">Learn More</a>
-      </div>
-    </div>
 
-    <div id="learn-more-content" class="hidden">
-      <p>Build creativity and imagination with this high-quality, 72-piece block set. Made from naturally finished and smooth-sanded hardwood blocks, this set comes in a convenient wooden storage crate (13” L x 12” W x 2” H).</p>
-    </div>
+          <!-- Product Pricing -->
+          <div class="product-price">
+            <span>69.99$</span>
+            <a href="#" class="cart-btn" onclick="ToggleLearnMore()">Learn More</a>
+          </div>
+        </div>
+
+        <div id="learn-more-content" class="hidden">
+          <p>Build creativity and imagination with this high-quality, 72-piece block set. Made from naturally finished
+            and smooth-sanded hardwood blocks, this set comes in a convenient wooden storage crate (13” L x 12” W x 2”
+            H).</p>
+        </div>
   </main>
   <script src="script.js"></script>
   <script>
     document.querySelectorAll('.color-choose input').forEach((element) => {
-    element.addEventListener('click', function () {
-      let imageName = this.getAttribute('data-image');
-      document.querySelectorAll('.img-holder img').forEach((img) => {
-  img.classList.remove('active');
+      element.addEventListener('click', function () {
+        let imageName = this.getAttribute('data-image');
+        document.querySelectorAll('.img-holder img').forEach((img) => {
+          img.classList.remove('active');
+        });
+        document.querySelector(`.img-holder img[data-image='${imageName}']`).classList.add('active');
       });
-      document.querySelector(`.img-holder img[data-image='${imageName}']`).classList.add('active');
     });
-  });
-  
-  function ToggleLearnMore(){
-    const learnMoreContent = document.getElementById('learn-more-content');
-    if (learnMoreContent.classList.contains('hidden')) {
-      learnMoreContent.classList.remove('hidden');
-      learnMoreContent.classList.add('show');
-    } else {
-      learnMoreContent.classList.remove('show');
-      learnMoreContent.classList.add('hidden');
+
+    function ToggleLearnMore() {
+      const learnMoreContent = document.getElementById('learn-more-content');
+      if (learnMoreContent.classList.contains('hidden')) {
+        learnMoreContent.classList.remove('hidden');
+        learnMoreContent.classList.add('show');
+      } else {
+        learnMoreContent.classList.remove('show');
+        learnMoreContent.classList.add('hidden');
+      }
     }
-  }
-    </script>
+  </script>
 </body>

@@ -28,8 +28,10 @@ body {font-family: "Lato", sans-serif}
 .show {display: block;}
 
 .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
     }
@@ -37,8 +39,6 @@ body {font-family: "Lato", sans-serif}
     .left-column,
     .right-column {
       flex: 1;
-      max-width: 500px;
-      margin: 20px;
       text-align: center;
     }
 
@@ -47,20 +47,55 @@ body {font-family: "Lato", sans-serif}
       height: auto;
     }
 
+    .product-description {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .product-description h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .product-color {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .color-choose {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .color-choose div{
+      margin-right: 10px;
+    }
+    .product-price{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .cart-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color:white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .cart-btn:hover {
+      background-color: #0056b3;
+    }
+    #learn-more-content {
+      text-align: center;
+    }
     @media (min-width: 768px) {
-
-      .left-column,
-      .right-column {
-        flex: 1;
+      .container{
+        flex-direction: row;
       }
-
       .left-column {
-        order: 1;
+        margin-right: 20px;
       }
-
-      .right-column {
-        order: 2;
-        text-align: left;
+      .color-choose div{
+        margin-right: 20px;
       }
     }
 </style>
