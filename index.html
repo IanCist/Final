@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title> Little Bird Toy Factory </title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-        crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://use.typekit.net/nca3amv.css">
-<link href="style.css" rel="stylesheet" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-.contact-info {
-  padding-top: 20px;
-}
+  <title> Little Bird Toy Factory </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.typekit.net/nca3amv.css">
+  <link rel="stylesheet" href="https://use.typekit.net/sgl4cpj.css">
+  <link href="style.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    .contact-info {
+      padding-top: 20px;
+    }
 
 
     @media (max-width: 430px) {
@@ -37,15 +39,14 @@ body {font-family: "Lato", sans-serif}
 
       .w3-bar-item img {
         height: 50px;
-        /* Adjust logo height for smaller screens */
       }
 
       .center-iframe iframe {
-        max-height: none; /* Allow the map to take full height */
+        max-height: none;
       }
 
       .contact-info {
-        padding-top: 10px; /* Reduce padding for the contact info */
+        padding-top: 10px;
       }
 
       .w3-col-lg-6,
@@ -55,141 +56,173 @@ body {font-family: "Lato", sans-serif}
         padding: 0;
       }
     }
-</style>
+
+    .hero {
+      background-image: url('blocks/block5.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 115vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin: 0;
+      color: orange;
+      font-family: "playpen-sans", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    .descr {
+      font-size: 1.5rem;
+      margin: 0;
+      color: black;
+      font-family: "mynerve", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
 </head>
+
 <body>
 
-     <!-- Navbar -->
-     <div class="w3-top">
-      <div class="w3-bar w3-black w3-card">
-        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="index.html" class="w3-bar-item w3-button w3-padding-large"><img src="img/Main Logo (1) PS 3.png" alt="logo" style="height:100px;"></a>
-        <a href="gallery.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-buttons">Gallery</a>
-        <a href="review.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-buttons">Reviews</a>
-        <div class="w3-dropdown-hover w3-hide-small">
-          <button class="w3-padding-large w3-button nav-buttons" title="More">Products <i class="fa fa-caret-down"></i></button>     
-          <div class="w3-dropdown-content w3-bar-block w3-card-4" class="navbarlinks">
-            <a href="woodenairplane.html" class="w3-bar-item w3-button">Wooden Airplane</a>
-            <a href="woodentrain.html" class="w3-bar-item w3-button">Wodden Train Set</a>
-            <a href="woodenboat.html" class="w3-bar-item w3-button">Wodden Boat</a>
-            <a href="woodenblock.html" class="w3-bar-item w3-button">Wodden Block Set</a>
-            <a href="woodencar.html" class="w3-bar-item w3-button">Wodden Car</a>
-          </div>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large"><img src="img/Main Logo (1) PS 3.png"
+          alt="logo" style="height:100px;"></a>
+      <a href="gallery.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-buttons">Gallery</a>
+      <a href="review.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-buttons">Reviews</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button nav-buttons" title="More">Products <i
+            class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4" class="navbarlinks">
+          <a href="woodenairplane.html" class="w3-bar-item w3-button">Wooden Airplane</a>
+          <a href="woodentrain.html" class="w3-bar-item w3-button">Wodden Train Set</a>
+          <a href="woodenboat.html" class="w3-bar-item w3-button">Wodden Boat</a>
+          <a href="woodenblock.html" class="w3-bar-item w3-button">Wodden Block Set</a>
+          <a href="woodencar.html" class="w3-bar-item w3-button">Wodden Car</a>
         </div>
-        <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
       </div>
     </div>
-    
-    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+  </div>
+
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
   <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
     <a href="gallery.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Gallery</a>
     <a href="review.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Reviews</a>
-    <a href="woodenairplane.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Wooden Airplane</a>
+    <a href="woodenairplane.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Wooden
+      Airplane</a>
     <a href="woodenblock.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Wooden Blocks</a>
     <a href="woodencar.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Wooden Car</a>
     <a href="woodentrain.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Wooden Train</a>
   </div>
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:2000px;margin-top:0 !important">
 
-  <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container w3-center">
-    <img src="" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Los Angeles</h3>
-      <p><b>We had the best time playing at Venice Beach!</b></p>   
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="/w3images/ny.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>New York</h3>
-      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="/w3images/chicago.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Chicago</h3>
-      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
-    </div>
-  </div>
-
-  <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide">About Us</h2>
-    <p class="w3-opacity"><i>Our Story</i></p>
-    <p class="w3-justify">Little Bird Toys, established in 2018, brings families handcrafted wooden toys designed to spark imagination and slow down playtime. Our heirloom-quality collection is built from sustainable materials and made to last a lifetime, fostering connections between generations.
-    </p>
-    <p class="w3-opacity"><i>Our commitment to good quality</i></p>
-    <p class="w3-justify">We believe in the power of simple, safe play. Our handcrafted toys are free from plastic and batteries, and made with sustainable Baltic birch wood. Each piece is meticulously crafted and rigorously tested in our Toms River, NJ workshop to meet the highest safety standards (ASTM & CA-Prop 65) and ensure unmatched durability.
-
- 
-
-  <!-- Ticket Modal -->
-  <div id="ticketModal" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal w3-center w3-padding-32"> 
-        <span onclick="document.getElementById('ticketModal').style.display='none'" 
-       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-      </header>
-      <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+    <div class="hero">
+      <div>
+        <h1>Welcome to the Little Bird Toy Factory!</h1>
+        <p class="descr">Handcrafted Wooden Toys for Generations</p>
       </div>
     </div>
-  </div>
 
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px pa" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <!-- The Band Section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+      <h2 class="w3-wide">About Us</h2>
+      <p class="w3-opacity"><i>Our Story</i></p>
+      <p class="w3-justify">Little Bird Toys, established in 2018, brings families handcrafted wooden toys designed to
+        spark imagination and slow down playtime. Our heirloom-quality collection is built from sustainable materials
+        and made to last a lifetime, fostering connections between generations.
+      </p>
+      <p class="w3-opacity"><i>Our commitment to good quality</i></p>
+      <p class="w3-justify">We believe in the power of simple, safe play. Our handcrafted toys are free from plastic and
+        batteries, and made with sustainable Baltic birch wood. Each piece is meticulously crafted and rigorously tested
+        in our Toms River, NJ workshop to meet the highest safety standards (ASTM & CA-Prop 65) and ensure unmatched
+        durability.
 
-   
-    <div class="w3-row w3-padding-32"> 
-      <div class="center-iframe">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.499079112664!2d-74.200697123838!3d39.95259308375739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c19de104aca169%3A0x3a79f18c2f7c1fec!2s43%20Main%20St%2C%20Toms%20River%2C%20NJ%2008753!5e0!3m2!1sen!2sus!4v1716570727711!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-      <div class="w3-col m6 w3-large w3-margin-bottom" style="padding-top: 20px;">
-        <i class="fa fa-map-marker" style="width:30px"></i> 43 Main St, Toms River, NJ 08753<br>
-        <i class="fa fa-phone" style="width:30px"></i> Phone: (732) 555-1234<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: LittleBirdToyCo@Gmail.Com<br>
-      </div>
-      <div class="w3-col-lg-6 w3-col-md-6 w3-col-12 contact-info" style="padding-top: 20px;">
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-            </div>
+
+
+        <!-- Ticket Modal -->
+      <div id="ticketModal" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-card-4">
+          <header class="w3-container w3-teal w3-center w3-padding-32">
+            <span onclick="document.getElementById('ticketModal').style.display='none'"
+              class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+            <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+          </header>
+          <div class="w3-container">
+            <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
+            <input class="w3-input w3-border" type="text" placeholder="How many?">
+            <p><label><i class="fa fa-user"></i> Send To</label></p>
+            <input class="w3-input w3-border" type="text" placeholder="Enter email">
+            <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i
+                class="fa fa-check"></i></button>
+            <button class="w3-button w3-red w3-section"
+              onclick="document.getElementById('ticketModal').style.display='none'">Close <i
+                class="fa fa-remove"></i></button>
+            <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
           </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-        </form>
+        </div>
       </div>
-    </div>
-  </div>
-  
-<!-- End Page Content -->
-</div>
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
-<script src="script.js"></script>
+      <!-- The Contact Section -->
+      <div class="w3-container w3-content w3-padding-64" style="max-width:800px pa" id="contact">
+        <h2 class="w3-wide w3-center">CONTACT</h2>
+
+
+        <div class="w3-row w3-padding-32">
+          <div class="center-iframe">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.499079112664!2d-74.200697123838!3d39.95259308375739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c19de104aca169%3A0x3a79f18c2f7c1fec!2s43%20Main%20St%2C%20Toms%20River%2C%20NJ%2008753!5e0!3m2!1sen!2sus!4v1716570727711!5m2!1sen!2sus"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="w3-col m6 w3-large w3-margin-bottom" style="padding-top: 20px;">
+            <i class="fa fa-map-marker" style="width:30px"></i> 43 Main St, Toms River, NJ 08753<br>
+            <i class="fa fa-phone" style="width:30px"></i> Phone: (732) 555-1234<br>
+            <i class="fa fa-envelope" style="width:30px"> </i> Email: LittleBirdToyCo@Gmail.Com<br>
+          </div>
+          <div class="w3-col-lg-6 w3-col-md-6 w3-col-12 contact-info" style="padding-top: 20px;">
+            <form action="/action_page.php" target="_blank">
+              <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                <div class="w3-half">
+                  <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                </div>
+                <div class="w3-half">
+                  <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                </div>
+              </div>
+              <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+              <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- End Page Content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+      </p>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
